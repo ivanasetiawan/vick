@@ -1,0 +1,93 @@
+// Home
+.introduction
+	background: url("../images/bg-intro.jpg") no-repeat center #34393d
+	// +retina-image("concrete_wall", 520px, 520px, repeat)
+	min-height: 610px
+	color: #fff
+	.introtext
+		width: 41%
+		float: left
+		margin-top: 170px
+		z-index: 3
+		h1
+			font-size: emCalc(30px)
+			font-weight: 300
+	.formbox
+		+retina-image("lightpaperfibers", 500px, 300px, repeat)
+		+border-radius($default-radius)
+		width: 46%
+		float: right
+		margin-top: 50px
+		overflow: hidden
+		z-index: 3
+		h2
+			font-size: emCalc(20px)
+			font-weight: 400
+			text-align: center
+			background: $color-green
+			padding: emCalc(15px, 20px) 0
+			color: $color-grey-dark
+			border-bottom: solid 1px $color-green-dark
+		form
+			padding: emCalc(10px) emCalc(20px) emCalc(20px)
+		label
+			+hide-text
+			width: emCalc(66px)
+			height: emCalc(66px)
+			display: block
+			float: left
+			border-right: solid 1px $color-body
+		input[type="text"], input[type="password"]
+			font-family: $font-family
+			font-weight: 300
+			width: emCalc(319px, 20px)
+			display: block
+			font-size: emCalc(20px)
+			line-height: 1
+			padding: 21px 20px 20px 10px
+
+	input[type="submit"]
+		@extend %btn-submit
+		margin: emCalc(20px, 20px) 0
+
+	.field
+		+border-radius($default-radius)
+		overflow: hidden
+		height: emCalc(66px)
+		background: #fff
+		margin-top: emCalc(20px)
+
+@each $label in mail, user, password
+	.label-#{$label}
+		background: url("../images/label-#{$label}.png") center no-repeat
+
+.mainfooter
+	color: $color-grey
+	text-align: center
+	> p
+		margin: 20px 0 30px
+	ul
+		@extend %clear-list
+		display: inline-block
+	li
+		width: emCalc(400px)
+		float: left
+		p
+			text-align: left
+			margin: 0
+	h1
+		margin: 5px 0
+		text-align: left
+		font-size: emCalc(18px)
+	.avatar
+		@extend %circle-shape
+		width: 82px
+		height: 82px
+		text-align: center
+		float: left
+		margin-right: 15px
+
+
+
+
+

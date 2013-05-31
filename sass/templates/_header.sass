@@ -1,0 +1,29 @@
+// Header
+.mainheader
+	height: emCalc(50px)
+	h1
+		margin: 0
+		> a
+			+hide-text
+			+retina-image("logo", 165px, 165px, no-repeat)
+			width: emCalc(165px, 50px)
+			height: emCalc(165px, 50px)
+			display: block
+			position: absolute
+			top: 10px
+			left: 0
+	nav
+		position: absolute
+		right: 20px
+		top: 10px
+		ul
+			@extend %clear-list
+		li
+			float: left
+			margin-left: emCalc(30px)
+		a
+			color: $font-color
+			&:hover
+				color: $color-green
+
+
